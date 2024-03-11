@@ -20,9 +20,25 @@ public class DefaultMethodEx {
         } else {
             remoteControl = new Audio();
             remoteControl.turnON();
-
-
+            remoteControl.setVolume(39);
         }
+        RemoteControl rc = new RemoteControl() {
+            @Override
+            public void turnON() {
+                System.out.println("플레이스테이션5 켭니다.");
+            }
+
+            @Override
+            public void turnOFF() {
+                System.out.println("플레이스테이션5를 끕니다.");
+            }
+
+            @Override
+            public void setVolume(int volume) {
+
+
+            }
+        };
     }
 }
 
